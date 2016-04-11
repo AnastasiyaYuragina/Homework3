@@ -19,11 +19,12 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="MyButton" parent="android:style/Widget.Button">
-        <!--<item name="android:layout_margin">2dp</item>-->
         <item name="android:background">@color/button_background</item>
-        <item name="android:padding">30dp</item>
-        <!--<item name="android:text">@string/text_button</item>-->
-        <item name="android:layout_weight">1</item>
+        <item name="android:paddingBottom">28dp</item>
+        <item name="android:paddingTop">28dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:text">@string/text_button</item>
     </style>
 
 </resources>
