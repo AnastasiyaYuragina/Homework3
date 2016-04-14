@@ -11,15 +11,23 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity  	android:name=".SettingsActivity"
+            android:launchMode="singleTask"
             android:label="@string/settings" >
+        </activity>
+        <activity android:name=".App"
+            android:label="@string/app"
+            android:launchMode="singleTask"
+            android:icon="@drawable/ic_send_black_24dp">
         </activity>
     </application>
 

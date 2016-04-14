@@ -7,10 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
 
 public class MainActivity extends AppCompatActivity {
+
+    public void openNewApp(View view) {
+        Intent intent = new Intent(MainActivity.this, App.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,16 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-//        GridLayout gridLayout = (GridLayout) findViewById(R.id.gridlayout);
-//        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
-//            gridLayout.setColumnCount(3);
-//            addButton(gridLayout.getColumnCount(), gridLayout);
-//        } else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
-//            gridLayout.setColumnCount(5);
-//            addButton(gridLayout.getColumnCount(), gridLayout);
-//        }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -52,23 +51,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-//    private void addButton(int colum, GridLayout gridLayout) {
-//
-//
-//        for (int i = 0; i < colum; i++) {
-//            for (int j = 0; j < 10; j++) {
-//                Button button = new Button(this);
-//                button.setId(i + j);
-//                button.setText(R.string.text_button);
-//                gridLayout.addView(button);
-//
-//                GridLayout.LayoutParams params = (GridLayout.LayoutParams) button.getLayoutParams();
-//                params.columnSpec = GridLayout.spec(i);
-//                params.rowSpec = GridLayout.spec(j);
-//                params.setMargins(2, 2, 2, 2);
-//            }
-//        }
-//
-//    }
 }

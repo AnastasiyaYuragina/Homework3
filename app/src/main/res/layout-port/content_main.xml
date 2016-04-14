@@ -14,8 +14,8 @@
         android:background="@color/colorPrimary"
         android:id="@+id/gridlayout"
         android:padding="2dp"
-        android:columnCount="3"
-        android:rowCount="10">
+        android:columnCount="@integer/column_count_port"
+        android:rowCount="@integer/row_count">
 
         <Button
             android:layout_width="wrap_content"
@@ -25,7 +25,10 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_margin="2dp"/>
+            android:layout_margin="2dp"
+            android:onClick="openNewApp"
+            android:drawableTop="@drawable/ic_send_black_24dp"
+            android:text="@string/app"/>
 
         <Button
             android:layout_width="wrap_content"
