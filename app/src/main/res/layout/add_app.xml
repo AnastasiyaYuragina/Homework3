@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/application"
+        android:id="@+id/imageApp"
         android:background="@android:color/transparent"
-        android:drawableTop="@android:drawable/btn_star_big_on"
-        android:text="@string/app"
-        android:onClick="openNewApp"
-        android:layout_weight="1"
-        android:layout_margin="2dp"/>
+        android:layout_gravity="top"/>
 
-</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textApp"
+        android:gravity="bottom"
+        android:layout_margin="2dp"
+        android:background="@android:color/transparent"/>
+
+</FrameLayout>

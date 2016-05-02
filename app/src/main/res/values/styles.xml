@@ -6,7 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:buttonStyle">@style/MyButton</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -18,13 +17,5 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="MyButton" parent="android:style/Widget.Button">
-        <item name="android:background">@color/button_background</item>
-        <!--<item name="android:paddingBottom">28dp</item>-->
-        <!--<item name="android:paddingTop">28dp</item>-->
-        <!--<item name="android:paddingRight">30dp</item>-->
-        <!--<item name="android:paddingLeft">30dp</item>-->
-        <item name="android:text">@string/text_button</item>
-    </style>
 
 </resources>
