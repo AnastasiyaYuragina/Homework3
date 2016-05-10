@@ -49,10 +49,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
             return true;
-        } else if (id == R.id.button_add_app) {
-//            Button button = (Button) findViewById(R.id.application);
-//            adapter.appItem(button);
-            return true;
         }
 
         return super.onOptionsItemSelected(item);

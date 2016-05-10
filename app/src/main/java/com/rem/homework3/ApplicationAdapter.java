@@ -1,7 +1,9 @@
 package com.rem.homework3;
 
+import android.content.ClipData;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -9,6 +11,8 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.rem.homework3.Application.*;
 
 public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.ViewHolder> implements Filterable{
     private ArrayList<String> items;
@@ -41,6 +45,7 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.button.setText(items.get(position));
         holder.button.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_launcher, 0, 0);
+        holder.button.setOnTouchListener(new MyTouchListener());
     }
 
     @Override
@@ -80,6 +85,22 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
         protected void publishResults(CharSequence constraint, FilterResults results) {
             items.addAll((List<String>) results.values);
             notifyDataSetChanged();
+        }
+    }
+
+    private final class MyTouchListener implements View.OnTouchListener {
+
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                ClipData clipData = ClipData.newPlainText("", "");
+                View.DragShadowBuilder dragShadowBuilder = new View.DragShadowBuilder(v);
+                v.startDrag(clipData, dragShadowBuilder, v, 0);
+                v.setVisibility(View.INVISIBLE);
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }
