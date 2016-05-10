@@ -20,11 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity  	android:name=".SettingsActivity"
-            android:launchMode="singleTask"
-            android:label="@string/settings"
-            >
-        </activity>
         <activity android:name=".App"
             android:label="@string/app"
             android:launchMode="singleTask"
