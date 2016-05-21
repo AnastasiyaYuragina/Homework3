@@ -12,8 +12,6 @@ import android.widget.Filterable;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.rem.homework3.Application.*;
-
 public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.ViewHolder> implements Filterable{
     private ArrayList<String> items;
     private ArrayList<String> originalItems;
@@ -36,7 +34,6 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
     @Override
     public ApplicationAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.add_app, parent, false);
-
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -45,7 +42,7 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.button.setText(items.get(position));
         holder.button.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_launcher, 0, 0);
-        holder.button.setOnTouchListener(new MyTouchListener());
+//        holder.button.setOnTouchListener(new MyTouchListener());
     }
 
     @Override
